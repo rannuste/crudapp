@@ -1,0 +1,15 @@
+CRUDApp
+- 
+
+The CRUDApp is used for doing four basic activities with Users' database: create, read, update and delete. All this is possible only after user's authentication.
+To use CRUDApp you need to:
+
+1. Create and activate a virtualenv in project's directory
+
+2. Install the requirements (all the requirements can be found in the requirements.txt text file)
+
+3. Clone all the project's files from Git respiratory
+
+
+Flask is the framework used in this project for token-based authentication and 
+
