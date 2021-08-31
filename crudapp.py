@@ -32,7 +32,7 @@ class User(db.Model):
     first_name = db.Column(db.String(30))
     last_name = db.Column(db.String(150))
     is_active = db.Column(db.Boolean, nullable=True)
-    last_login = db.Column(db.DateTime, default=datetime.datetime.utcnow())
+    last_login = db.Column(db.DateTime, default=datetime.utcnow())
     is_superuser = db.Column(db.Boolean, default=False)
 
     def __init__(self, username, password, first_name, last_name, is_active, is_superuser=False):
@@ -60,8 +60,8 @@ class User(db.Model):
     def encode_auth_token(self, user_id):
         try:
             payload = {
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, second=5),
-                'iat': datetime.datetime.utcnow(),
+                'exp': datetime.utcnow() + datetime.timedelta(days=0, second=5),
+                'iat': datetime.utcnow(),
                 'sub': user_id
             }
             return jwt.encode(
