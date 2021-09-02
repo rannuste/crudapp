@@ -11,5 +11,5 @@ To use CRUDApp you need to:
 3. Clone all the project's files from Git respiratory
 
 
-Flask is the framework used in this project for token-based authentication and 
+Flask is the framework used in this project for token-based authentication
 
